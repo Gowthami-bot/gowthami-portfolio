@@ -1,0 +1,88 @@
+/* ==========================================================================
+   responsive.css
+   Mobile-first overrides. Base styles in style.css already work down to
+   small phones for single-column content; this file handles nav collapse
+   and grid column changes at each breakpoint.
+   ========================================================================== */
+
+/* ---------- Below 900px: collapse nav into hamburger, stack hero/about ---------- */
+@media (max-width: 900px) {
+  .nav-toggle { display: flex; }
+
+  .main-nav {
+    position: fixed;
+    top: var(--header-height);
+    left: 0;
+    right: 0;
+    background: var(--bg);
+    border-bottom: 1px solid var(--border);
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.25s ease;
+  }
+  .main-nav.is-open { max-height: 400px; }
+
+  .main-nav ul {
+    flex-direction: column;
+    gap: 0;
+    padding: 0.5rem var(--gutter) 1rem;
+  }
+  .main-nav li { border-bottom: 1px solid var(--border); }
+  .main-nav li:last-child { border-bottom: none; }
+  .main-nav a {
+    display: block;
+    padding: 0.9rem 0;
+    font-size: 1rem;
+  }
+
+  .hero-inner {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .hero-media { order: -1; max-width: 220px; }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .skills-grid { grid-template-columns: repeat(2, 1fr); }
+
+  .project-grid { grid-template-columns: 1fr; }
+
+  .achievements-grid { grid-template-columns: 1fr; }
+}
+
+/* ---------- Below 640px: tighter type scale and spacing for phones ---------- */
+@media (max-width: 640px) {
+  :root {
+    --step-5: 2.5rem;
+    --step-4: 2rem;
+    --step-3: 1.6rem;
+    --gutter: 1.25rem;
+  }
+
+  .section { padding: 3.5rem 0; }
+  .hero { padding: 3rem 0 2.5rem; }
+
+  .hero-cta { flex-direction: column; align-items: stretch; }
+  .hero-cta .btn { width: 100%; }
+
+  .skills-grid { grid-template-columns: 1fr; }
+
+  .footer-inner {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+  }
+}
+
+/* ---------- 901px–1180px: slightly tighter desktop grids ---------- */
+@media (min-width: 901px) and (max-width: 1180px) {
+  .achievements-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* ---------- Guard against horizontal scroll without breaking sticky header ----------
+   overflow-x: hidden on html/body would break position:sticky in most browsers,
+   so instead we make sure nothing in the layout can cause overflow in the first place. */
+img, video { max-width: 100%; }

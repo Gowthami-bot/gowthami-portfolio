@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Gowthami — Backend Developer &amp; Applied AI Engineer</title>
+  <meta name="description" content="Portfolio of Gowthami, a Java/Spring Boot backend developer building applied AI and RAG systems, preparing for SDE-1 roles at product companies.">
+  <meta name="keywords" content="Gowthami, backend developer, Java, Spring Boot, RAG, LangGraph, SDE-1, portfolio">
+  <meta name="author" content="Gowthami">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Gowthami — Backend Developer & Applied AI Engineer">
+  <meta property="og:description" content="Java/Spring Boot backend developer building applied AI and RAG systems.">
+  <meta property="og:type" content="website">
+
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+
+  <!-- Apply any saved theme choice before first paint, to avoid a flash of the wrong theme. -->
+  <script>
+    (function () {
+      try {
+        var saved = localStorage.getItem('portfolio-theme');
+        if (saved === 'dark' || saved === 'light') {
+          document.documentElement.setAttribute('data-theme', saved);
+        }
+      } catch (e) {}
+    })();
+  </script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Styles (built out in Phase 2) -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- ============ HEADER / NAV ============ -->
+  <header class="site-header" id="top">
+    <div class="header-inner">
+      <a href="#top" class="logo">Gowthami</a>
+
+      <nav class="main-nav" id="main-nav" aria-label="Primary">
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#achievements">Achievements</a></li>
+          <li><a href="#resume">Resume</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Switch to dark mode" aria-pressed="false">
+          <span class="theme-toggle-icon" aria-hidden="true"></span>
+        </button>
+
+        <button type="button" class="nav-toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="main-nav">
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+          <span class="nav-toggle-bar"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ============ HOME / HERO ============ -->
+    <section class="hero" id="home">
+      <div class="hero-inner">
+        <div class="hero-text">
+          <p class="hero-role" id="hero-role">Backend Developer</p>
+          <h1>Gowthami</h1>
+          <p class="hero-intro">
+            I build backend systems in Java and Spring Boot, and spend my spare cycles
+            wiring together retrieval-augmented AI systems — from a WhatsApp fact-checking
+            agent to an IEEE research project on RAG hallucination correction.
+          </p>
+          <div class="hero-cta">
+            <a href="#projects" class="btn btn-primary">View Projects</a>
+            <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+          </div>
+        </div>
+
+        <div class="hero-media">
+          <img
+            src="assets/images/profile.jpg"
+            alt="Portrait of Gowthami"
+            width="360"
+            height="360"
+            loading="eager"
+            class="profile-photo"
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section class="section" id="about">
+      <div class="section-inner reveal">
+        <h2>About</h2>
+        <div class="about-grid">
+          <div class="about-text">
+            <p>
+              I'm a Computer Science student in the CSE department at Velammal College
+              of Engineering and Technology, currently preparing for SDE-1 roles at
+              product-based companies — primarily Zoho. My core stack is Java and Spring
+              Boot on the backend, with React on the frontend and a working comfort
+              across relational and vector databases.
+            </p>
+            <p>
+              Alongside placement preparation, I've been building a portfolio of applied
+              AI and NLP projects — mainly retrieval-augmented generation (RAG) systems —
+              and I'm six months into an IEEE research project on detecting and
+              correcting hallucinations in RAG pipelines. My longer-term interest is
+              moving from backend engineering into applied AI/LLM systems work.
+            </p>
+          </div>
+
+          <dl class="about-facts">
+            <div class="about-fact">
+              <dt>Education</dt>
+              <dd>B.E. Computer Science &amp; Engineering, Velammal College of Engineering &amp; Technology (2024&ndash;2028) &middot; CGPA 8.92/10</dd>
+            </div>
+            <div class="about-fact">
+              <dt>Focus</dt>
+              <dd>Backend engineering (Java / Spring Boot) with applied AI / RAG systems</dd>
+            </div>
+            <div class="about-fact">
+              <dt>Currently</dt>
+              <dd>Preparing for SDE-1 placements &middot; writing an IEEE paper on RAG hallucination correction</dd>
+            </div>
+            <div class="about-fact">
+              <dt>Based in</dt>
+              <dd>Madurai, Tamil Nadu, India</dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SKILLS ============ -->
+    <section class="section section-alt" id="skills">
+      <div class="section-inner reveal">
+        <h2>Skills</h2>
+        <div class="skills-grid">
+
+          <div class="skill-group">
+            <h3>Programming</h3>
+            <ul class="skill-tags">
+              <li>Java</li>
+              <li>Python</li>
+              <li>JavaScript</li>
+            </ul>
+          </div>
+
+          <div class="skill-group">
+            <h3>Web</h3>
+            <ul class="skill-tags">
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>React</li>
+            </ul>
+          </div>
+
+          <div class="skill-group">
+            <h3>Backend</h3>
+            <ul class="skill-tags">
+              <li>Spring Boot</li>
+              <li>Spring Web MVC</li>
+              <li>REST APIs</li>
+              <li>Flask</li>
+            </ul>
+          </div>
+
+          <div class="skill-group">
+            <h3>Database</h3>
+            <ul class="skill-tags">
+              <li>SQL</li>
+              <li>JDBC</li>
+              <li>Qdrant (vector DB)</li>
+            </ul>
+          </div>
+
+          <div class="skill-group">
+            <h3>AI / ML</h3>
+            <ul class="skill-tags">
+              <li>RAG pipelines</li>
+              <li>LangGraph</li>
+              <li>LangChain</li>
+              <li>Hybrid retrieval (BM25 + embeddings)</li>
+              <li>Cross-encoder reranking</li>
+            </ul>
+          </div>
+
+          <div class="skill-group">
+            <h3>Tools</h3>
+            <ul class="skill-tags">
+              <li>Git &amp; GitHub</li>
+              <li>Streamlit</li>
+              <li>LangSmith</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PROJECTS ============ -->
+    <section class="section" id="projects">
+      <div class="section-inner reveal">
+        <h2>Projects</h2>
+
+        <div class="project-filters" id="project-filters" role="group" aria-label="Filter projects by category">
+          <button type="button" class="filter-btn is-active" data-filter="all">All</button>
+          <button type="button" class="filter-btn" data-filter="ai">Applied AI</button>
+          <button type="button" class="filter-btn" data-filter="research">Research</button>
+        </div>
+
+        <div class="project-grid" id="project-grid">
+
+          <article class="project-card" data-category="ai">
+            <img src="assets/images/project-mythbuster.png" alt="" loading="lazy" class="project-image">
+            <div class="project-body">
+              <h3>WhatsApp Myth Buster Agent</h3>
+              <p>
+                A LangGraph-based agentic RAG fact-checking system deployed on Streamlit
+                Community Cloud. Combines hybrid BM25 + embedding retrieval with
+                cross-encoder reranking and live web search to verify claims, with all
+                124 automated tests passing at completion.
+              </p>
+              <ul class="project-tags">
+                <li>Python</li>
+                <li>LangGraph</li>
+                <li>Groq LLMs</li>
+                <li>Qdrant</li>
+                <li>Streamlit</li>
+              </ul>
+              <div class="project-links">
+                <a href="https://github.com/Gowthami-bot/whatsapp-mythbuster-agent" target="_blank" rel="noopener">GitHub</a>
+                <a href="https://whatsapp-mythbuster-agent-gowthami.streamlit.app/" target="_blank" rel="noopener">Live Demo</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card" data-category="ai">
+            <img src="assets/images/project-pdf-rag.png" alt="" loading="lazy" class="project-image">
+            <div class="project-body">
+              <h3>PDF RAG Chatbot</h3>
+              <p>
+                My first major AI project: a document-grounded chatbot with a repaired
+                reranking pipeline, an evaluation dashboard for retrieval quality, a
+                casual-conversation gate, and strict document-only prompting backed by
+                LangSmith tracing.
+              </p>
+              <ul class="project-tags">
+                <li>Python</li>
+                <li>RAG</li>
+                <li>LangSmith</li>
+              </ul>
+              <div class="project-links">
+                <a href="#" target="_blank" rel="noopener">GitHub</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card" data-category="ai">
+            <img src="assets/images/project-disha.png" alt="" loading="lazy" class="project-image">
+            <div class="project-body">
+              <h3>DISHA — Disaster Rescue System</h3>
+              <p>
+                Built for the ISRO Bharatiya Antariksh Hackathon: an AI-powered disaster
+                rescue concept using infrared satellite imagery, GAN-based colorization,
+                super-resolution, and semantic segmentation to help locate survivors.
+              </p>
+              <ul class="project-tags">
+                <li>Computer Vision</li>
+                <li>GANs</li>
+                <li>Satellite Imagery</li>
+              </ul>
+              <div class="project-links">
+                <a href="#" target="_blank" rel="noopener">GitHub</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project-card" data-category="research">
+            <img src="assets/images/project-cegc.png" alt="" loading="lazy" class="project-image">
+            <div class="project-body">
+              <h3>CEGC — Causal Evidence Graph Correction</h3>
+              <p>
+                A six-month IEEE research project on detecting and correcting
+                hallucinations in RAG systems. Completed the Zeroth Review presentation;
+                paper writing is underway.
+              </p>
+              <ul class="project-tags">
+                <li>RAG</li>
+                <li>Hallucination Detection</li>
+                <li>IEEE Research</li>
+              </ul>
+              <div class="project-links">
+                <a href="#" target="_blank" rel="noopener">Read more</a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ EXPERIENCE ============ -->
+    <section class="section section-alt" id="experience">
+      <div class="section-inner reveal">
+        <h2>Experience</h2>
+        <ol class="timeline">
+          <li class="timeline-item">
+            <div class="timeline-date">2026</div>
+            <div class="timeline-content">
+              <h3>Python with AI Intern</h3>
+              <p class="timeline-org">Dotcom Infoway</p>
+              <p>
+                Built the WhatsApp Myth Buster Agent, a Python fact-checking assistant
+                using LangChain and RAG to retrieve relevant evidence for a claim, with
+                Flask for the service layer and LangSmith for tracing during development.
+              </p>
+              <ul class="project-tags">
+                <li>Python</li>
+                <li>LangChain</li>
+                <li>RAG</li>
+                <li>Flask</li>
+              </ul>
+              <div class="project-links">
+                <a href="https://github.com/Gowthami-bot/whatsapp-mythbuster-agent" target="_blank" rel="noopener">GitHub</a>
+                <a href="#" target="_blank" rel="noopener">Live Demo</a>
+              </div>
+            </div>
+          </li>
+          <li class="timeline-item">
+            <div class="timeline-date">2025</div>
+            <div class="timeline-content">
+              <h3>Frontend Development Intern</h3>
+              <p class="timeline-org">Kevell Corp</p>
+              <p>
+                Developed BuyNow, an e-commerce clone website, building out the webpage
+                with HTML, CSS, and JavaScript and gaining hands-on frontend development
+                experience.
+              </p>
+              <ul class="project-tags">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+              </ul>
+              <div class="project-links">
+                <a href="#" target="_blank" rel="noopener">GitHub</a>
+              </div>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ ACHIEVEMENTS ============ -->
+    <section class="section" id="achievements">
+      <div class="section-inner reveal">
+        <h2>Achievements</h2>
+        <div class="achievements-grid">
+          <div class="achievement-card">
+            <h3>IEEE Zeroth Review Completed</h3>
+            <p>Presented the Zeroth Review for CEGC, a RAG hallucination detection and correction framework, as part of a six-month research project.</p>
+          </div>
+          <div class="achievement-card">
+            <h3>124/124 Tests Passing</h3>
+            <p>Shipped the WhatsApp Myth Buster Agent to production with a full pytest suite passing at completion.</p>
+          </div>
+          <div class="achievement-card">
+            <h3>Java Coding Round — Shield Winner</h3>
+            <p>Won a shield in the Java Coding Round at a college symposium.</p>
+          </div>
+          <div class="achievement-card">
+            <h3>Smart India Hackathon</h3>
+            <p>Participated in the Smart India Hackathon (SIH).</p>
+          </div>
+          <div class="achievement-card">
+            <h3>60+ LeetCode Problems Solved</h3>
+            <p>Ongoing DSA practice as part of SDE-1 placement preparation.</p>
+          </div>
+          <div class="achievement-card">
+            <h3>Certifications</h3>
+            <p>Java Programming (NPTEL) &middot; Programming in C (NPTEL) &middot; Python (Kaggle)</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ RESUME ============ -->
+    <section class="section section-alt" id="resume">
+      <div class="section-inner section-inner-narrow reveal">
+        <h2>Resume</h2>
+        <p>Download a copy of my resume for a full summary of my education, skills, and project experience.</p>
+        <a href="assets/resume/Gowthami_V_S_A_Resume_2026.pdf" class="btn btn-primary" download>
+          Download Resume (PDF)
+        </a>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="section" id="contact">
+      <div class="section-inner section-inner-narrow reveal">
+        <h2>Contact</h2>
+        <p>Have a role, a project, or a question? Send a message.</p>
+
+        <form id="contact-form" class="contact-form" novalidate>
+          <div class="form-field">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" autocomplete="name" required>
+            <span class="form-error" id="name-error" role="alert"></span>
+          </div>
+
+          <div class="form-field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" autocomplete="email" required>
+            <span class="form-error" id="email-error" role="alert"></span>
+          </div>
+
+          <div class="form-field">
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" required>
+            <span class="form-error" id="subject-error" role="alert"></span>
+          </div>
+
+          <div class="form-field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+            <span class="form-error" id="message-error" role="alert"></span>
+          </div>
+
+          <button type="submit" class="btn btn-primary">Send Message</button>
+          <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p>&copy; <span id="year"></span> Gowthami. Built from scratch with HTML, CSS &amp; JavaScript.</p>
+      <ul class="footer-links">
+        <li><a href="https://github.com/Gowthami-bot" target="_blank" rel="noopener">GitHub</a></li>
+        <li><a href="#" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a href="mailto:add-your-email@example.com">Email</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <!-- Scripts (built out in Phase 3) -->
+  <script src="js/theme.js" defer></script>
+  <script src="js/projects.js" defer></script>
+  <script src="js/main.js" defer></script>
+</body>
+</html>
